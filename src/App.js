@@ -1,5 +1,9 @@
+import React from 'react';
+import ProductList from './components/ProductList.js';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
