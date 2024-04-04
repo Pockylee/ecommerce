@@ -8,7 +8,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchData = async () => {
             const productsData = await getProducts();
-            setProducts(productsData);
+            setProducts(productsData); // Set the fetched products to state
         };
 
         fetchData();
@@ -20,7 +20,10 @@ const ProductList = () => {
                 <div key={product.id}>
                     <h2>{product.title}</h2>
                     <p>{product.description}</p>
-                    {/* Display other product details here */}
+                    <p>Price: {product.price}</p>
+                    {/* Optionally, you can also display the product thumbnail */}
+                    {/* <img src={product.thumbnail} alt={product.title} /> */}
+                    {/* Add buttons or links for product actions */}
                 </div>
             ))}
         </div>
