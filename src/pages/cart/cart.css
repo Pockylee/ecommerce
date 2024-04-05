@@ -6,6 +6,7 @@
   }
   
   .cartItem {
+    position: relative; /* Add this line */
     width: 700px;
     height: 250px;
     display: flex;
@@ -88,7 +89,8 @@
   }
   
   .checkout button:hover {
-    background-color: rgb(108, 108, 108);
+    background-color: rgb(200, 200, 200);
+    color: black;
   }
 
   .checkout {
@@ -102,4 +104,29 @@
     display: flex;
     flex-direction: row; /* Align buttons horizontally */
     gap: 10px; /* Add some space between the buttons */
+}
+
+.emptyCart button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.emptyCart button:hover {
+  background-color: rgb(200, 200, 200);
+  color: black;
+}
+
+
+.remove-icon {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  cursor: pointer; /* To indicate it's clickable */
+  color: #cc0000; /* Optional: color for the icon */
 }

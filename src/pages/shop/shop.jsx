@@ -3,8 +3,6 @@ import { ShopContext } from '../../context/shop-context';
 import { Product } from './product';
 
 import './shop.css'
-import { SelectionForeground } from 'phosphor-react';
-import e from 'cors';
 
 export const Shop = () => {
         const { products } = useContext(ShopContext);
