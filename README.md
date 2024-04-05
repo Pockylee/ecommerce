@@ -12,6 +12,13 @@ Before running the application, make sure you have [Node.js](https://nodejs.org/
 
 In the project directory, you can run the following scripts:
 
+### `npm i && npm start`
+Install all the package you need and runs both the app in development mode and the backend server concurrently.\
+The React app will be open at [http://localhost:3000](http://localhost:3000) to view it in your browser, and the backend server will run at [http://localhost:8080](http://localhost:8080).
+
+The page will reload when you make frontend changes.\
+You may also see any lint errors in the console.
+
 ### `npm start`
 
 Runs both the app in development mode and the backend server concurrently.\
