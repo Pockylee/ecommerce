@@ -1,6 +1,9 @@
 // src/components/ProductList.js
 import React, { useEffect, useState } from 'react';
 import { getProducts } from '../api/apiService';
+import Product from './Product';
+
+
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -8,6 +11,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchData = async () => {
             const productsData = await getProducts();
+            console.log(productsData);
             setProducts(productsData); // Set the fetched products to state
         };
 
@@ -15,19 +19,17 @@ const ProductList = () => {
     }, []);
 
     return (
-        <div>
-            {products.map(product => (
-                <div key={product.id}>
-                    <h2>{product.title}</h2>
-                    <p>{product.description}</p>
-                    <p>Price: {product.price}</p>
-                    {/* Optionally, you can also display the product thumbnail */}
-                    {/* <img src={product.thumbnail} alt={product.title} /> */}
-                    {/* Add buttons or links for product actions */}
-                </div>
-            ))}
+        <div className="container">
+            <div className="row">
+                {products.map(product => (
+                    <div key={product.id} className="col-md-4">
+                        <Product product={product} />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
+
 
 export default ProductList;
